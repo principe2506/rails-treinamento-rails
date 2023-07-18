@@ -1,15 +1,13 @@
 <section class="py-5 text-center container">
     <div class="row py-lg-5" style="text-align: center;">
       <div class="col-lg-6 col-md-8 mx-auto" style="float: none;display: inline-block;">
-        <h1 class="fw-light">Entre em contato conosco</h1>
+        <h1 class="fw-light">Editando um contato</h1>
         <p class="lead text-body-secondary">
             Preencha o formulário abaixo:
         </p>
 
         <div style="text-align: left">
-
-          <%= render "form", url:"/contato/cadastrar", onsubmit:"", contato:Contato.new %>
-          
+          <%= render "form-rails", contato:@contato %>
         </div>
       </div>
     </div>

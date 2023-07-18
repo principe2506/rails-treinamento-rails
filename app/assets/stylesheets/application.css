@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+.btn-acoes{
+    width: 70px;
+    margin: 5px;
+}

@@ -10,15 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_06_27_180615) do
+ActiveRecord::Schema.define(version: 2023_07_18_182220) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "clientes", id: :serial, force: :cascade do |t|
-    t.string "nome", limit: 100
-    t.text "modelo"
-    t.float "valor"
+  create_table "bancos", force: :cascade do |t|
+    t.string "nome", limit: 150
+    t.string "localizacao", limit: 150
+    t.integer "ano_fundacao"
+    t.integer "numero_agencias"
+    t.string "email", limit: 150
+    t.text "obs"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "contatos", force: :cascade do |t|
