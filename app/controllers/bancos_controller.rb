@@ -71,6 +71,8 @@ class BancosController < ApplicationController
 
     def hook_console
       puts "Parâmetros:"
+      puts "==============================================================================================="
       puts params.inspect
+      puts "==============================================================================================="
     end
 end
