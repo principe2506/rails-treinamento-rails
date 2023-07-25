@@ -3,7 +3,53 @@
     <span class="glyphicon glyphicon-plus"></span>
     New Banco
   <% end %>
-  <h1>Listing bancos</h1>
+  <h1>Listando bancos</h1>
+</div>
+
+<div>
+  <form class="form-horizontal" action="/alunos" accept-charset="UTF-8" method="get">
+    <div class="form-group">
+      <label class="col-sm-1 control-label" for="aluno_nome">Nome</label>
+      <div class="col-sm-11">
+        <input class="form-control" type="text" name="nome" id="aluno_nome">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-1 control-label" for="aluno_email">Localização</label>
+      <div class="col-sm-11">
+      <input class="form-control" type="text" name="localizacao" id="localizacao">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-1 control-label" for="ano_fundacao">Ano de fundação</label>
+      <div class="col-sm-11">
+      <input class="form-control" type="text" name="ano_fundacao" id="ano_fundacao">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-1 control-label" for="numero_agencias">Numero de Agencias</label>
+      <div class="col-sm-11">
+      <input class="form-control" type="text" name="numero_agencias" id="numero_agencias">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-1 control-label" for="email">Email</label>
+      <div class="col-sm-11">
+      <input class="form-control" type="email" name="email" id="email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-1 control-label" for="obs">Obs</label>
+      <div class="col-sm-11">
+        <input class="form-control" type="text" name="obs" id="obs">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-12" style="text-align:right">
+        <input type="submit" value="Buscar" class="btn btn-primary" data-disable-with="Create Aluno">
+      </div>
+    </div>
+  </form>
 </div>
 
 <div class="table-responsive">
