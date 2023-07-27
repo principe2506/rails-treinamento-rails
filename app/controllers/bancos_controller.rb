@@ -1,11 +1,10 @@
 class BancosController < ApplicationController
   before_action :set_banco, only: %i[ show edit update destroy ]
-  before_action :hook_console, only: [:create, :update]
+  before_action :hook_console, only: [:create, :update, :index]
 
   # GET /bancos or /bancos.json
   def index
-    @bancos = Banco.all
-    @bancos = @bancos.where("lower(nome) like ?", "%#{params[:nome].downcase}%") if params[:nome].present?
+    @bancos = BancoServiceQuery.busca_por_parametro(params)
   end
 
   # GET /bancos/1 or /bancos/1.json
