@@ -45,6 +45,12 @@
       </div>
     </div>
     <div class="form-group">
+      <label class="col-sm-1 control-label" for="ids">ID´s por ,</label>
+      <div class="col-sm-11">
+        <input class="form-control" type="text" name="ids" value="<%= params[:ids] %>" id="ids">
+      </div>
+    </div>
+    <div class="form-group">
     <div class="form-group col-sm-6">
       <label class="col-sm-3 control-label" for="ano_ini">Ano inicio</label>
       <div class="col-sm-9">
@@ -70,6 +76,7 @@
   <table class="table table-striped table-bordered table-hover">
     <thead>
       <tr>
+            <th>#</th>
             <th>Nome</th>
             <th>Localizacao</th>
             <th>Ano fundacao</th>
@@ -84,6 +91,7 @@
 
     <tbody>
       <%= content_tag_for(:tr, @bancos) do |banco| %>
+            <td><%= banco.id %></td>
             <td><%= banco.nome %></td>
             <td><%= banco.localizacao %></td>
             <td><%= banco.ano_fundacao %></td>

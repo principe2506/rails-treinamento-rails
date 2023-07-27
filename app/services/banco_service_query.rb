@@ -12,6 +12,13 @@ class BancoServiceQuery
         bancos = bancos.where("ano_fundacao >= ?", params[:ano_ini]) if params[:ano_ini].present? 
         bancos = bancos.where("ano_fundacao <= ?", params[:ano_fim] )if params[:ano_fim].present? 
 
+        #bancos = bancos.where("ano_fundacao between ? and ?", params[:ano_ini], params[:ano_fim]) if params[:ano_ini].present? && params[:ano_fim].present?
+        
+        if params[:ids].present?
+            array_ids = params[:ids].split(",").map{|s| s.to_i}.find_all{|n| n > 0} rescue []
+            bancos = bancos.where(id: array_ids)
+        end
+
         bancos 
     end
 end
